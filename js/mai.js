@@ -50,12 +50,16 @@ $(document).ready(function() {
         },
         //inseres menssagem personalizadas aos campos especificados.
         messages: {
-            name: 'Por favor, isira o seu nome'
+            name: `Por favor, isira o seu nome`,
+            email: `Por favor, isira o seu E-mail`,
+            tel: `Por favor, isira o seu Telefone`
         },
 
+        //verifica os campos não prenchidos do formulario
         submitHandler : function(form) {
             console.log(form)
         },
+
         invalidHandler: function(event, validador) {
             let camposInvalid = validador.numberOfInvalids()
             if (camposInvalid) {
